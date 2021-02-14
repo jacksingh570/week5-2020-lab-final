@@ -31,7 +31,20 @@ public class GroceryItem {
         if (price >= 0 && price <= 200){
             this.price = price;
         }else{
-            throw
+            throw new IllegalArgumentException("price must be 0-200 inclusive");
+        }
+    }
+
+    public String getCategory(){
+        return category;
+    }
+
+    public void setCategory(String category){
+        List<String> categories = Arrays.asList("Fruit", "Vegetables", "Meat", "Gluten", "Dairy", "Seafood");
+        if (categories.contains(category.toLowerCase())){
+            this.category = category;
+        }else{
+            throw new IllegalArgumentException(category + " is not an option, use: " + categories);
         }
     }
 }
