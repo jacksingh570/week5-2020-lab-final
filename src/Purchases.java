@@ -20,6 +20,22 @@ public class Purchases {
         return totalPrice;
     }
 
+    public getGroceryNames(){
+        String groceries = "";
+        for (GroceryItem groceryItem:shoppingCart){
+            groceries += groceryItem.getName() + ", ";
+        }
+        return groceries.substring(0,groceries.length()-2);
+    }
+
+    public String getCategories(){
+        String groceries = "";
+        for (GroceryItem groceryItem:shoppingCart){
+            groceries += groceryItem.getCategory() + ", ";
+        }
+        return groceries.substring(0,groceries.length()-2);
+    }
+
     public String toString(){
         return String.format("The shopping cart has %d items worth $%.2f", shoppingCart.size(), getTotalPrice());
     }
