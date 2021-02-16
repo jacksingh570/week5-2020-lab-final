@@ -9,9 +9,9 @@ public class Main {
         double total = shoppingCart.getTotalPrice();
         System.out.printf("The total price is: $%.2f%n", total);
 
-        GroceryItem item3 = new GroceryItem("cheese", 1.50, "dairy");
+        GroceryItem item3 = new GroceryItem("cheese", 1.50, "Dairy");
         shoppingCart.addGroceryItem(item3);
-        shoppingCart.addGroceryItem(new GroceryItem("milk", 12.50, "dairy"));
+        shoppingCart.addGroceryItem(new GroceryItem("milk", 12.50, "Dairy"));
         System.out.println(shoppingCart);
     }
 }

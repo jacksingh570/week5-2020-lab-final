@@ -47,5 +47,7 @@ public class GroceryItem {
             throw new IllegalArgumentException(category + " is not an option, use: " + categories);
         }
     }
-
+    public String toString(){
+        return String.format("%s, category: %s, price: $%.2f" ,name,category,price);
+    }
 }
