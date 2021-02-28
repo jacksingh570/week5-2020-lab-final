@@ -15,12 +15,12 @@ public class Purchases {
     public double getTotalPrice(){
         double totalPrice = 0;
         for(GroceryItem groceryItem:shoppingCart){
-            totalPrice = totalPrice + groceryItem.getPrice();
+            totalPrice += totalPrice + groceryItem.getPrice();
         }
         return totalPrice;
     }
 
-    public getGroceryNames(){
+    public String getGroceryNames(){
         String groceries = "";
         for (GroceryItem groceryItem:shoppingCart){
             groceries += groceryItem.getName() + ", ";
